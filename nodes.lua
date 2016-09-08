@@ -1,19 +1,5 @@
 local myname, ns = ...
 
--- [6856] = setupLandmarkIcon(GetPOITextureCoords(111)), -- Ballad of Liu Lang
--- [6716] = setupLandmarkIcon(GetPOITextureCoords(112)), -- Between a Saurok and a Hard Place
--- [6846] = setupLandmarkIcon(GetPOITextureCoords(113)), -- Fish Tails
--- [6857] = setupLandmarkIcon(GetPOITextureCoords(114)), -- Heart of the Mantid Swarm
--- [6850] = setupLandmarkIcon(GetPOITextureCoords(115)), -- Hozen in the Mist
--- [7230] = setupLandmarkIcon(GetPOITextureCoords(116)), -- Legend of the Brewfathers
--- [6754] = setupLandmarkIcon(GetPOITextureCoords(117)), -- The Dark Heart of the Mogu
--- [6855] = setupLandmarkIcon(GetPOITextureCoords(118)), -- The Seven Burdens of Shaohao
--- [6847] = setupLandmarkIcon(GetPOITextureCoords(119)), -- The Song of the Yaungol
--- [6858] = setupLandmarkIcon(GetPOITextureCoords(120)), -- What is Worth Fighting For
--- [8049] = setupLandmarkIcon(GetPOITextureCoords(112)), -- Zandalari Prophecy
--- [8050] = setupLandmarkIcon(GetPOITextureCoords(113)), -- Rumbles of Thunder
--- [8051] = setupLandmarkIcon(GetPOITextureCoords(114)), -- Gods and Monsters
-
 ns.points = {
     --[[ structure:
     [mapFile] = { -- "_terrain1" etc will be stripped from attempts to fetch this
@@ -31,7 +17,7 @@ ns.points = {
     ["BrokenIsles"] = { -- Overview
         -- broken shore
         [49507310] = { quest=43733, poi=115, label="Orb 4", scale=0.8, },
-        [50207160] = { quest=43761, poi=121, label="Orb 10", scale=0.8, },
+        [50207160] = { quest=43761, poi=111, label="Orb 10", scale=0.8, },
         -- azsuna
         [31105470] = { quest=43730, poi=112, label="Orb 1", scale=0.8, },
         [37604760] = { quest=43734, poi=116, label="Orb 5", scale=0.8, },
@@ -50,7 +36,7 @@ ns.points = {
         [37007100] = { npc=102695, label="Drak'thul", note="Talk to him first!" }, -- Drak'thul
         [57005200] = { quest=43730, atlas="map-icon-SuramarDoor.tga", item=139783, label="Cave for Weathered Relic", }, -- TODO: better questid
         [29167857] = { quest=43733, poi=115, label="Orb 4", },
-        [37057105] = { quest=43761, poi=121, label="Orb 10", },
+        [37057105] = { quest=43761, poi=111, label="Orb 10", },
     },
     ["Azsuna"] = {
         [37963741] = { quest=43730, poi=112, label="Orb 1", },
