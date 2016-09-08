@@ -23,8 +23,8 @@ ns.points = {
         [37604760] = { quest=43734, poi=116, label="Orb 5", scale=0.8, },
         [36605190] = { quest=43737, poi=119, label="Orb 8", scale=0.8, },
         -- stormheim
-        [67261490] = { quest=43731, poi=113, label="Orb 2", scale=0.8, },
-        [53804290] = { quest=43735, poi=117, label="Orb 6", note="Underwater cave, near a shark", scale=0.8, },
+        [53804290] = { quest=43731, poi=113, label="Orb 2", scale=0.8, },
+        [67261490] = { quest=43735, poi=117, label="Orb 6", note="Underwater cave, near a shark", scale=0.8, },
         -- valsharah
         [31404110] = { quest=43732, poi=114, label="Orb 3", scale=0.8, },
         -- highmountain
