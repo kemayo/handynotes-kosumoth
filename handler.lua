@@ -180,7 +180,7 @@ do
         if not t then return nil end
         local state, value = next(t, prestate)
         while state do -- Have we reached the end of this zone?
-            if value then
+            if value and ns:ShouldShow(value) then
                 local label, icon, scale = get_point_info(value)
                 scale = (scale or 1) * (icon and icon.scale or 1) * ns.db.icon_scale
                 return state, nil, icon, scale, ns.db.icon_alpha
@@ -194,6 +194,15 @@ do
         mapFile = string.gsub(mapFile, "_terrain%d+$", "")
         currentZone = mapFile
         return iter, ns.points[mapFile], nil
+    end
+    function ns:ShouldShow(point)
+        if ns.db.completed then
+            return true
+        end
+        if not point.quest then
+            return true
+        end
+        return not IsQuestFlaggedCompleted(point.quest)
     end
 end
 

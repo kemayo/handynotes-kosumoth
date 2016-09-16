@@ -4,6 +4,7 @@ ns.defaults = {
     profile = {
         icon_scale = 1.5,
         icon_alpha = 1.0,
+        completed = false,
     },
 }
 
@@ -39,6 +40,19 @@ ns.options = {
                     desc = "The alpha transparency of the icons",
                     min = 0, max = 1, step = 0.01,
                     order = 30,
+                },
+            },
+        },
+        display = {
+            type = "group",
+            name = "What to display",
+            inline = true,
+            args = {
+                completed = {
+                    type = "toggle",
+                    name = "Show completed",
+                    desc = "Show waypoints for orbs you've already found?",
+                    order = 20,
                 },
             },
         },
