@@ -14,6 +14,9 @@ local icon_cache = {}
 local function poi_texture(poi)
     if not icon_cache[poi] then
         local left, right, top, bottom = GetPOITextureCoords(poi)
+        if not left then
+            return
+        end
         icon_cache[poi] = {
             icon = [[Interface\Minimap\POIIcons]],
             tCoordLeft = left,
@@ -46,7 +49,10 @@ local function work_out_texture(point)
         return atlas_texture(point.atlas)
     end
     if point.poi then
-        return poi_texture(point.poi)
+        local tex = poi_texture(point.poi)
+        if tex then
+            return tex
+        end
     end
     if point.npc then
         return atlas_texture("DungeonSkull", 1.5)
