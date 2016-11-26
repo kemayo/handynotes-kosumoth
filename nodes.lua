@@ -34,7 +34,7 @@ ns.points = {
     },
     ["BrokenShore"] = {
         [37007100] = { npc=102695, label="Drak'thul", note="Talk to him first!" }, -- Drak'thul
-        [57005200] = { quest=43730, atlas="map-icon-SuramarDoor.tga", item=139783, label="Cave for Weathered Relic", }, -- TODO: better questid
+        [58545405] = { quest=43730, atlas="map-icon-SuramarDoor.tga", item=139783, label="Cave for Weathered Relic", }, -- TODO: better questid
         [29167857] = { quest=43733, poi=115, label="Orb 4", },
         [37057105] = { quest=43761, poi=111, label="Orb 10", },
     },
