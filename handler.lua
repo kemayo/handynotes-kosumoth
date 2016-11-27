@@ -228,6 +228,7 @@ function HL:OnInitialize()
 
     -- watch for LOOT_CLOSED
     self:RegisterEvent("LOOT_CLOSED")
+    self:RegisterEvent("QUEST_LOG_UPDATE")
 end
 
 function HL:Refresh()
@@ -235,5 +236,8 @@ function HL:Refresh()
 end
 
 function HL:LOOT_CLOSED()
+    self:Refresh()
+end
+function HL:QUEST_LOG_UPDATE()
     self:Refresh()
 end
