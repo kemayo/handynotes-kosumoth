@@ -49,6 +49,9 @@ ns.points = {
         [32927590] = { quest=43731, hide_before=43730, poi=113, label="Orb 2", },
         [76000300] = { quest=43735, hide_before=43734, poi=117, label="Orb 6", note="Swim north from here...", },
     },
+    ["Suramar"] = {
+        [63603250] = { quest=43731, hide_before=43730, poi=113, label="Orb 2", },
+    },
     ["Valsharah"] = {
         [41518118] = { quest=43732, hide_before=43731, poi=114, label="Orb 3", },
     },
