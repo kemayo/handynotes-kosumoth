@@ -5,6 +5,8 @@ ns.defaults = {
         icon_scale = 1.5,
         icon_alpha = 1.0,
         completed = false,
+        numbered = true,
+        upcoming = false,
     },
 }
 
@@ -51,8 +53,20 @@ ns.options = {
                 completed = {
                     type = "toggle",
                     name = "Show completed",
-                    desc = "Show waypoints for orbs you've already found?",
+                    desc = "Show waypoints for orbs you've already found",
                     order = 20,
+                },
+                numbered = {
+                    type = "toggle",
+                    name = "Show numbers",
+                    desc = "Use the orb number as the icon (may be a bit harder to see)",
+                    order = 30,
+                },
+                upcoming = {
+                    type = "toggle",
+                    name = "Show irrelevant orbs",
+                    desc = "Show the upcoming quest steps, as well as the current one (may be too much currently-useless information)",
+                    order = 40,
                 },
             },
         },

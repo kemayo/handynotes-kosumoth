@@ -14,7 +14,7 @@ local icon_cache = {}
 local function poi_texture(poi)
     if not icon_cache[poi] then
         local left, right, top, bottom = GetPOITextureCoords(poi)
-        if not left then
+        if not left or (left == 0 and right == 0 and top == 0 and bottom == 0) then
             return
         end
         icon_cache[poi] = {
@@ -48,7 +48,7 @@ local function work_out_texture(point)
     if point.atlas then
         return atlas_texture(point.atlas)
     end
-    if point.poi then
+    if point.poi and ns.db.numbered then
         local tex = poi_texture(point.poi)
         if tex then
             return tex
@@ -57,7 +57,7 @@ local function work_out_texture(point)
     if point.npc then
         return atlas_texture("DungeonSkull", 1.5)
     end
-    return atlas_texture("PurplePortal", 1.5)
+    return atlas_texture("MonkUI-LightOrb-small", 1.5)
 end
 
 local get_point_info = function(point)
@@ -202,13 +202,16 @@ do
         return iter, ns.points[mapFile], nil
     end
     function ns:ShouldShow(point)
-        if ns.db.completed then
-            return true
+        if point.hide_before and not IsQuestFlaggedCompleted(point.hide_before) then
+            return ns.db.upcoming
         end
-        if not point.quest then
-            return true
+        if point.hide_after and IsQuestFlaggedCompleted(point.hide_after) then
+            return ns.db.completed
         end
-        return not IsQuestFlaggedCompleted(point.quest)
+        if point.quest then
+            return ns.db.completed or not IsQuestFlaggedCompleted(point.quest)
+        end
+        return true
     end
 end
 
