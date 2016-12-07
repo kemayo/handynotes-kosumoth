@@ -60,6 +60,6 @@ ns.points = {
     },
     ["AszunaDungeonExterior"] = { -- Eye of Azshara
         [79528931] = { quest=43760, hide_before=43737, poi=120, label="Orb 9", },
-        [46005200] = { hide_before=43761, npc=111573, label="Kosumoth", },
+        [46005200] = { quest=45479, hide_before=43761, npc=111573, label="Kosumoth", },
     },
 }
