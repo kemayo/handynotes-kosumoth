@@ -1,4 +1,4 @@
-## Interface: 70000
+## Interface: 80000
 ## Title: HandyNotes_Kosumoth
 ## Notes: You want to find the orbs to enable Kosumoth? Sure, why not?
 ## Author: Kemayo
