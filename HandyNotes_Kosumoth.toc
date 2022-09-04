@@ -1,4 +1,4 @@
-## Interface: 90100
+## Interface: 90207
 ## Title: HandyNotes_Kosumoth
 ## Notes: You want to find the orbs to enable Kosumoth? Sure, why not?
 ## Author: Kemayo
