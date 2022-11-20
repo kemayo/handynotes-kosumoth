@@ -9,6 +9,7 @@ local next = next
 local GameTooltip = GameTooltip
 local HandyNotes = HandyNotes
 
+local GetPOITextureCoords = _G.GetPOITextureCoords or C_Minimap.GetPOITextureCoords
 local icon_cache = {}
 local function poi_texture(poi)
     if not icon_cache[poi] then
